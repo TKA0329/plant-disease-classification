@@ -38,3 +38,7 @@ Took the FreeCodeCamp Introduction to PyTorch course, where I learned:
 ## Next Goals
 1. Push image classification accuracy beyond 75%+ on real-world data
 2. Improve object detection accuracy with further fine-tuning
+
+## Datasets
+1. **PlantVillage dataset:** Used for training and benchmarking. Available at [PlantVillage GitHub](https://github.com/spMohanty/PlantVillage-Dataset.git)  
+2. **Real-world images:** Curated from Google Images to test generalization (not included in the repo due to licensing restrictions)
