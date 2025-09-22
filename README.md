@@ -44,4 +44,4 @@ Took the FreeCodeCamp Introduction to PyTorch course, where I learned:
 2. **Real-world images:** Curated from Google Images to test generalization (not included in the repo due to licensing restrictions)
 
 ## .pt and .pth Files
-1. [GoogleDrive](https://drive.google.com/drive/folders/1SJD4w37yV43QSEeLKKjAJIl7sS5iMiMP?usp=drive_link)
+1. [GoogleDriveFolder](https://drive.google.com/drive/folders/1SJD4w37yV43QSEeLKKjAJIl7sS5iMiMP?usp=drive_link)

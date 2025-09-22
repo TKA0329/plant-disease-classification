@@ -1,0 +1,12 @@
+streamlit
+torch
+io
+os
+zipfile
+pathlib
+torchvision
+ultralytics
+cv2
+pillow
+numpy
+matplotlib
