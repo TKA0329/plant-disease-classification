@@ -43,5 +43,5 @@ Took the FreeCodeCamp Introduction to PyTorch course, where I learned:
 1. **PlantVillage dataset:** Used for training and benchmarking. Available at [PlantVillage GitHub](https://github.com/spMohanty/PlantVillage-Dataset.git)  
 2. **Real-world images:** Curated from Google Images to test generalization (not included in the repo due to licensing restrictions)
 
-## .pt and .pth Files
-1. [GoogleDriveFolder](https://drive.google.com/drive/folders/1SJD4w37yV43QSEeLKKjAJIl7sS5iMiMP?usp=drive_link)
+ ## Model Weights
+1. Pre-trained model weights (`.pt` / `.pth`) are hosted on [Google Drive](https://drive.google.com/drive/folders/1SJD4w37yV43QSEeLKKjAJIl7sS5iMiMP?usp=drive_link)
