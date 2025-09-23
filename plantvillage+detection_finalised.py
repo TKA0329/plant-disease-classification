@@ -11,6 +11,9 @@ from PIL import Image
 import gdown
 
 pth_path = Path("fc+3+4_RealWorld+PlantVillageModelV7.pth")
+pt_path = Path("my_model_5.zip")
+if not pt_path.exists():
+    gdown.download("https://drive.google.com/uc?id=18p9yjaAoRCnkZRcmbgWL8awGkwMIOf4g", str(pt_path), quiet=False)
 
 if not pth_path.exists():
     gdown.download("https://drive.google.com/uc?id=1U1_wAo24jBxrFaQO1gC3DLHtXdoolh8i", str(pth_path), quiet=False)
