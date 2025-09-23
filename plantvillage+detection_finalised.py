@@ -18,6 +18,7 @@ if not pth_path.exists():
 
 if not pt_path.exists():
     gdown.download("https://drive.google.com/file/d/1emlbp3vo_ONumYaHO0o1JvvVuOO6kAj9/view?usp=drive_link", str(pt_path), quiet=False)
+
 # Might be necessary if there's different class labels
 # Function to get class colors
 def getColours(cls_num):
@@ -41,7 +42,7 @@ model_loaded = resnet18(weights=None)
 model_loaded.fc = torch.nn.Linear(in_features=512, out_features=38)
 
 # Load the state dict
-model_loaded.load_state_dict(torch.load("fc+3+4_RealWorld+PlantVillageModelV7.pth", map_location=torch.device('cpu')))
+model_loaded.load_state_dict(torch.load(pth_path, map_location=torch.device('cpu')))
 
 # Set to eval mode (important for testing/inference)
 model_loaded.eval()
