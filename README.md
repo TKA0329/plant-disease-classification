@@ -35,6 +35,7 @@ Took the FreeCodeCamp Introduction to PyTorch course, where I explored:
 1. Saved/loaded model as .pth/.pt in VS Code
 2. Deployed app on Streamlit 
     - Demo (just upload a picture of a leaf): [Streamlit Link](https://plant-disease-classification-vayyob3uqtbmtgjf5clzhg.streamlit.app/)
+    - Note: If the Streamlit app link shows “This app has gone to sleep,” which can happen in just a couple of days of inactivity, just click “Get this app back up” and it should restart in a few seconds.
 3. Implemented top-k softmax to display model’s top-2 predictions with confidence scores
     - Disclaimer: This model is trained on the 38 classes in the PlantVillage dataset, alongside a small real-world sample obtained from Google Images. Accuracy is moderate, so results are meant for demonstration purposes and may not be fully reliable.
 
