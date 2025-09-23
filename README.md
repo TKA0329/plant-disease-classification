@@ -43,5 +43,8 @@ Took the FreeCodeCamp Introduction to PyTorch course, where I learned:
 1. **PlantVillage dataset:** Used for training and benchmarking. Available at [PlantVillage GitHub](https://github.com/spMohanty/PlantVillage-Dataset.git)  
 2. **Real-world images:** Curated from Google Images to test generalization (not included in the repo due to licensing restrictions)
 
+## References
+1. Referenced [geeksforgeeks Object Detection with YOLO and OpenCV](https://www.geeksforgeeks.org/computer-vision/object-detection-with-yolo-and-opencv/) for customization
+
  ## Model Weights
 1. Pre-trained model weights (`.pt` / `.pth`) are hosted on [Google Drive](https://drive.google.com/drive/folders/1SJD4w37yV43QSEeLKKjAJIl7sS5iMiMP?usp=drive_link)

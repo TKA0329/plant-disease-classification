@@ -5,7 +5,7 @@ import io
 import os 
 from pathlib import Path
 from torchvision.models import resnet18
-import cv2
+from PIL import ImageDraw, ImageFont
 import numpy as np
 from PIL import Image
 import gdown
@@ -156,13 +156,18 @@ if image_file is not None:
                          "yellow-green discoloration",
                          "yellow/brown patches", 
                          "yellow/brown/red spots"]
-        result_path = Path("streamlit_outputs/results/image0.jpg")
-        image = cv2.imread(str(result_path)) # requires a str 
-        # image = cv2.cvtColor(np.array(image), cv2.COLOR_RGB2BGR)
-        image = cv2.cvtColor(np.array(img), # NumPy (RGB)
-                             cv2.COLOR_RGB2BGR #cv2.imread(...) loads the image in BGR # NumPy (BGR)
-                             )
+        # Work on a copy of uploaded PIL image
+        image = img.copy()
+        draw = ImageDraw.Draw(image)
 
+        # Try to load a nicer font (Falls back to default if not found)
+        try:
+            font = ImageFont.truetype("arial.ttf", size=16)
+        except:
+            font=ImageFont.load_default() 
+
+        #result_path = Path("streamlit_outputs/results/image0.jpg")
+        
         for box in results.boxes:
             
             # box.xyxy[0] contains the bounding box coordinates: top-left (x1, y1) and bottom-right (x2, y2)
@@ -181,22 +186,18 @@ if image_file is not None:
             colour = getColours(cls)
 
             # draw the rectangle
-            cv2.rectangle(image, (x1, y1), (x2, y2), 
-                          colour, 
-                          2) # 1 is the thickness of box
+            draw.rectangle([x1, y1, x2, y2], outline=colour, width=3) # 1 is the thickness of box
 
-            # put the class name and confidence on the image
-            cv2.putText(image, f'{class_name} {box.conf[0]:.2f}', # display class name and confidence
-                        (x1, y1 - 5), # shift slightly above box
-                        cv2.FONT_HERSHEY_SIMPLEX, 
-                        0.5, # font size 
-                        colour, # colour of text
-                        1) # thickness of font must be int
+            # Label text
+            label = f"{class_name} {box.conf[0]:.2f}"
+            text_size = draw.textbbox((x1, y1), label, font=font)
+            text_bg = [text_size[0], text_size[1], text_size[2], text_size[3]]
+
+            # Draw filled rectangle behind text 
+            draw.rectangle(text_bg, fill=(0,0,0,127))
+            draw.text((x1, y1-18), label, font=font, fill=colour)
 
         st.markdown("#### Image with disease spots highlighted: ")
-        image = image = cv2.cvtColor(image,
-                             cv2.COLOR_BGR2RGB # Convert back to RGB for display # NumPy (RGB again)
-                             )
         image_pil = Image.fromarray(image) # PIL
         st.image(image_pil)
 
