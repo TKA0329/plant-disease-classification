@@ -2,10 +2,11 @@
 This project explores plant disease classification and object detection using deep learning (PyTorch).
 
 ## Learning Journey
-Took the FreeCodeCamp Introduction to PyTorch course, where I learned:
+Took the FreeCodeCamp Introduction to PyTorch course, where I explored:
 1. CNN architectures
-2. Kernels, padding, stride, and max pooling
+2. Kernels, padding, stride, max pooling etc.
 3. Training loops (backpropagation, gradient descent, etc.)
+4. Project training done on Google Colab Pro
 
 ## Results
 1. Achieved 90%+ accuracy on PlantVillage benchmark images.
