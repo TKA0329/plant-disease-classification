@@ -8,7 +8,16 @@ from torchvision.models import resnet18
 import cv2
 import numpy as np
 from PIL import Image
+import gdown
 
+pth_path = Path("fc+3+4_RealWorld+PlantVillageModelV7.pth")
+pt_path = Path("my_model_5.pt")
+
+if not pth_path.exists():
+    gdown.download("https://drive.google.com/file/d/1U1_wAo24jBxrFaQO1gC3DLHtXdoolh8i/view?usp=drive_link", str(pth_path), quiet=False)
+
+if not pt_path.exists():
+    gdown.download("https://drive.google.com/file/d/1emlbp3vo_ONumYaHO0o1JvvVuOO6kAj9/view?usp=drive_link", str(pt_path), quiet=False)
 # Might be necessary if there's different class labels
 # Function to get class colors
 def getColours(cls_num):
