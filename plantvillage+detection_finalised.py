@@ -189,7 +189,7 @@ if image_file is not None:
             cv2.putText(image, f'{class_name} {box.conf[0]:.2f}', # display class name and confidence
                         (x1, y1 - 5), # shift slightly above box
                         cv2.FONT_HERSHEY_SIMPLEX, 
-                        0.5, # font size 
+                        0.7, # font size 
                         colour, # colour of text
                         1) # thickness of font must be int
 
